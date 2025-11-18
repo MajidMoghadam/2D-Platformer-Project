@@ -15,17 +15,22 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;            // Reference to the Rigidbody2D component
     private bool isGrounded;           // True if player is standing on ground
 
+    //animations
+    private Animator animator;
+    private string currentState;
+
     void Start()
     {
         // Grab the Rigidbody2D attached to the Player object once at the start.
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();    
     }
 
     void Update()
     {
         // --- Horizontal movement ---
         // Get input from keyboard (A/D or Left/Right arrows).
-        float moveInput = Input.GetAxis("Horizontal");
+        float moveInput = Input.GetAxisRaw("Horizontal");
         // Apply horizontal speed while keeping the current vertical velocity.
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
@@ -34,7 +39,7 @@ public class PlayerController : MonoBehaviour
         // Create an invisible circle at the GroundCheck position.
         // If this circle overlaps any collider on the "Ground" layer, player is grounded.
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
+        //Debug.Log("isGrounded: " + isGrounded);
         // --- Jump ---
         // If player is grounded AND the Jump button (Spacebar by default) is pressed:
         if (isGrounded && Input.GetButtonDown("Jump"))
@@ -43,6 +48,56 @@ public class PlayerController : MonoBehaviour
             // Horizontal velocity stays the same.
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
-        
+
+        SetAnimation(moveInput);
+    }
+
+    private void SetAnimation(float moveInput)
+    {
+        //string newState;
+
+        //if (isGrounded)
+        //{
+        //    if (Mathf.Abs(moveInput) < 0.01f)
+        //        newState = "Player_Idle";
+        //    else
+        //        newState = "Player_Run";
+        //}
+        //else
+        //{
+        //    if (rb.linearVelocity.y > 0f)
+        //        newState = "Player_Jump";
+        //    else
+        //        newState = "Player_Fall";
+        //}
+
+        //// Only change if different
+        //if (newState != currentState)
+        //{
+        //    animator.Play(newState);
+        //    currentState = newState;
+        //}
+        if (isGrounded)
+        {
+            if (moveInput == 0)
+            {
+                animator.Play("Player_Idle");
+            }
+            else
+            {
+                animator.Play("Player_Run");
+            }
+        }
+        else
+        {
+            if (rb.linearVelocityY > 0)
+            {
+                animator.Play("Player_Jump");
+            }
+            else
+            {
+                animator.Play("Player_Fall");
+            }
+        }
     }
 }
