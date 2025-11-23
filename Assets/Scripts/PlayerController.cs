@@ -54,29 +54,6 @@ public class PlayerController : MonoBehaviour
 
     private void SetAnimation(float moveInput)
     {
-        //string newState;
-
-        //if (isGrounded)
-        //{
-        //    if (Mathf.Abs(moveInput) < 0.01f)
-        //        newState = "Player_Idle";
-        //    else
-        //        newState = "Player_Run";
-        //}
-        //else
-        //{
-        //    if (rb.linearVelocity.y > 0f)
-        //        newState = "Player_Jump";
-        //    else
-        //        newState = "Player_Fall";
-        //}
-
-        //// Only change if different
-        //if (newState != currentState)
-        //{
-        //    animator.Play(newState);
-        //    currentState = newState;
-        //}
         if (isGrounded)
         {
             if (moveInput == 0)
