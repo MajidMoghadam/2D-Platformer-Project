@@ -15,22 +15,20 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;            // Reference to the Rigidbody2D component
     private bool isGrounded;           // True if player is standing on ground
 
-    //animations
-    private Animator animator;
-    private string currentState;
+    private Animator animator;          //a reference to the Player's animator
 
     void Start()
     {
         // Grab the Rigidbody2D attached to the Player object once at the start.
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();    
+        animator = GetComponent<Animator>();    //getting the animator component on the player
     }
 
     void Update()
     {
         // --- Horizontal movement ---
         // Get input from keyboard (A/D or Left/Right arrows).
-        float moveInput = Input.GetAxisRaw("Horizontal");
+        float moveInput = Input.GetAxis("Horizontal");
         // Apply horizontal speed while keeping the current vertical velocity.
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
@@ -49,31 +47,33 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
-        SetAnimation(moveInput);
+        SetAnimation(moveInput);    // call animation logic based on movement and jump state
     }
 
+    // Decide which animation to play based on movement and grounded state
     private void SetAnimation(float moveInput)
     {
-        if (isGrounded)
+        if (isGrounded)                         //on the ground
         {
-            if (moveInput == 0)
+            if (moveInput == 0)                 //not moving
             {
-                animator.Play("Player_Idle");
+                
+                animator.Play("Player_Idle");   //play idle animation
             }
-            else
+            else                                //moving
             {
-                animator.Play("Player_Run");
+                animator.Play("Player_Run");    //play run animation
             }
         }
-        else
+        else                                    //in the air (not grounded)
         {
-            if (rb.linearVelocityY > 0)
+            if (rb.linearVelocityY > 0)         //going upward
             {
-                animator.Play("Player_Jump");
+                animator.Play("Player_Jump");   //play jump animation
             }
-            else
+            else                                //going downward
             {
-                animator.Play("Player_Fall");
+                animator.Play("Player_Fall");   //play fall animation
             }
         }
     }
