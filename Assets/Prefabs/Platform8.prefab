@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7565317132116250188}
   - component: {fileID: 3818296374120122619}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platforms_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 368344639491113588}
   - component: {fileID: 841798940932408604}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platforms_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2609139785268650469}
   - component: {fileID: 7593247783076862782}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platforms_2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8124159983947712366}
   - component: {fileID: 360156106364221084}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336429833975123686}
   - component: {fileID: 6043736383190420630}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platforms_2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1806149597220771521}
   - component: {fileID: 9060563417920814099}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platforms_2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -546,7 +546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4817148022805966838}
   - component: {fileID: 7068817298609365530}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platforms_2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7220979488292580730}
   - component: {fileID: 4889762154486219111}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platforms_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -726,7 +726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4979260873266133866}
   - component: {fileID: 5028526027489788574}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platforms_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -21,6 +21,8 @@ public class DoubleJump : MonoBehaviour
     {
         // check if GroundCheck overlaps with ground layer
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        Debug.Log("isGrounded=" + isGrounded + " | extraJumps=" + extraJumps);
+
 
         if (isGrounded)
         {
