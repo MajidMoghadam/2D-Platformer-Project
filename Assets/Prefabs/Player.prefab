@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 411614867410180666}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.076, z: 0}
+  m_LocalPosition: {x: 0, y: -0.0719, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,7 +45,11 @@ GameObject:
   - component: {fileID: 1861938491401493361}
   - component: {fileID: 3512654694143186602}
   - component: {fileID: 7047699529770064718}
+<<<<<<< HEAD
   - component: {fileID: -3553977285813796827}
+=======
+  - component: {fileID: 5865735417635220174}
+>>>>>>> ecd408f8efe657db79c275b384d15b43fe11748d
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -161,7 +165,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0002958551, y: 0.0032539964}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -171,7 +175,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.15, y: 0.17}
+  m_Size: {x: 0.12219323, y: 0.1481098}
   m_EdgeRadius: 0
 --- !u!50 &1861938491401493361
 Rigidbody2D:
@@ -241,7 +245,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+<<<<<<< HEAD
 --- !u!114 &-3553977285813796827
+=======
+--- !u!114 &5865735417635220174
+>>>>>>> ecd408f8efe657db79c275b384d15b43fe11748d
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -250,6 +258,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1937964588715306580}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 1214be3d836c2944eaa50f12162a758b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoubleJump
@@ -259,3 +268,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   jumpForce: 10
+=======
+  m_Script: {fileID: 11500000, guid: 534e49582a755f448b7c8b9d691fbda0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  health: 100
+>>>>>>> ecd408f8efe657db79c275b384d15b43fe11748d
