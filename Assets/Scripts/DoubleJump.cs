@@ -21,8 +21,7 @@ public class DoubleJump : MonoBehaviour
     {
         // check if GroundCheck overlaps with ground layer
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-        Debug.Log("isGrounded=" + isGrounded + " | extraJumps=" + extraJumps);
-
+        
 
         if (isGrounded)
         {
@@ -34,10 +33,12 @@ public class DoubleJump : MonoBehaviour
             if (isGrounded)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce); // normal jump
+                SoundManager.Instance.PlaySFX("JUMP");
             }
             else if (extraJumps > 0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce); // extra jump
+                SoundManager.Instance.PlaySFX("JUMP");
                 extraJumps--; // reduce available extra jumps
             }
         }
