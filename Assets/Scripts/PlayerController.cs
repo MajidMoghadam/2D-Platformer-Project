@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
             if (rb.linearVelocityY > 0)         //going upward
             {
                 animator.Play("Player_Jump");   //play jump animation
+                SoundManager.Instance.PlaySFX("JUMP", .01f);
             }
             else                                //going downward
             {
